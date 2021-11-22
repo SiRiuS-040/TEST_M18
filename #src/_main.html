@@ -1,3 +1,79 @@
 <main class="main">
-    <h2>Main </h2>
+    <h2 class="main__title">FIX Ремонт — это легко </h2>
+    <p class="main__subtitle">Готовые проекты, проверенные материалы и умелые руки </p>
+    <section class="main__advantages advantages">
+        <ul class="advantages__list">
+            <li class="advantages__item">
+                <h3 class="advantages__title">Опытная команда</h3>
+                <p class="advantages__description">Команда проектировщиков и строителей со стажем работы более 6 лет</p>
+            </li>
+            <li class="advantages__item">
+                <h3 class="advantages__title">Типовые дизайн-проекты</h3>
+                <p class="advantages__description">Три стиля чистовой отделки «под ключ» и спектр дополнительных услуг
+                </p>
+            </li>
+            <li class="advantages__item">
+                <h3 class="advantages__title">Фиксированная смета</h3>
+                <p class="advantages__description">Никаких дополнительных расходов во время ремонта. Расчет стоимости
+                    при заключении договора</p>
+            </li>
+            <li class="advantages__item advantages__item--special">
+                <h3 class="advantages__title advantages__title--special">Срок работ</h3>
+                <p class="advantages__description advantages__description--special">3 месяца</p>
+            </li>
+        </ul>
+    </section>
+    <h2 class="main__title">3 стиля интерьера</h2>
+    <p class="main__subtitle">Скандинавский, классический и эко-стиль</p>
+    <section class="main__interior-styles interior-styles">
+        <div class="interior-styles__slider slider">
+            <div class="slider__wrapper">
+                <ul class="slider__list">
+                    <!-- <li class="slider__item">
+                        <img src="img/photo-style-1.jpg" alt="Скандинавский стиль" width="750" height="500">
+                    </li> -->
+                    <li class="slider__item">
+                        <img src="img/photo-style-2.jpg" alt="Класический стиль" width="779" height="500">
+                    </li>
+                    <!-- <li class="slider__item">
+                        <img src="img/photo-style-3.jpg" alt="Эко стиль" width="751" height="500">
+                    </li> -->
+                </ul>
+            </div>
+            <div class="slider__controls">
+                <p class="slider__description">Кафельная плитка в ванной комнате в скандинавском стиле</p>
+                <button class="slider__control slider__control--back"> назад</button>
+                <button class="slider__control slider__control--forward">вперед </button>
+            </div>
+        </div>
+    </section>
+    <section class="form">
+        <form class="form__form" action="" autocomplete="off" method="post" enctype="multipart/form-data">
+            <fieldset class="form__group">
+                <legend class="form__legend">Узнайте о запуске сервиса первым</legend>
+                <p class="form__promotion">Первым 10 клиентам стальная <br /> входная дверь в подарок</p>
+                <ul class="form__list">
+                    <li class="form__item">
+                        <label class="form__label" for="name"><span class="visually-hidden"> Имя и
+                                фамилия*</span></label>
+                        <input class="form__input" type="text" name="name" placeholder="Имя и фамилия*" required
+                            autocomplete="off">
+                    </li>
+                    <li class="form__item">
+                        <label class="form__label" for="mail"><span class="visually-hidden">Е-mail
+                                адрес*</span></label>
+                        <input class="form__input" type="email" name="mail" placeholder="Е-mail адрес*" required
+                            autocomplete="off">
+                    </li>
+                    <li class="form__item">
+                        <label class="form__label" for="phone"><span class="visually-hidden">Телефон</span></label>
+                        <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="off">
+                    </li>
+                </ul>
+                <button type="submit" class="form__submit basic-button">Подписаться</button>
+                <p class="form__input-description">* Обязательные для заполнения поля</p>
+                <a class="form__rules-link" href="#">Политика конфиденциальности</a>
+            </fieldset>
+        </form>
+    </section>
 </main>
