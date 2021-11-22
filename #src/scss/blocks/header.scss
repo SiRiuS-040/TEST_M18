@@ -1,50 +1,37 @@
 .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: $white;
-    padding-top: 24px;
     font-family: $basic-font-text;
     font-size: 15px;
-
-    @media (min-width: $tablet-width) {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    @media (min-width: $desktop-width) {
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 .header__wrapper {
     display: flex;
     justify-content: space-between;
-
-    @media (min-width: $desktop-width) {
-        max-width: 1840px;
-    }
+    max-width: 1840px;
 }
 
 .header__logo-image {
-    @media (min-width: $tablet-width) {
-        margin-top: 28px;
-        width: 200px;
-        height: 55px;
-        margin-left: 90px;
-    }
-
-    @media (min-width: $desktop-width) {
-        margin-left: 90px;
-    }
+    margin-top: 28px;
+    width: 200px;
+    height: 55px;
+    margin-left: 90px;
 }
 
 .header__contacts-link {
     margin: 0;
+    margin-top: 41px;
+    margin-right: 90px;
     padding: 0;
-    font-size: 14px;
+    padding-left: 33px;
+    font-size: 21px;
+    line-height: 30px;
     text-decoration: none;
     color: $black;
     position: relative;
-    padding-left: 33px;
 
     &:hover {
         color: $hot-embers;
@@ -54,58 +41,34 @@
         content: "";
         position: absolute;
         background-image: url("../img/icon-phone.svg");
-        background-size: 15px 15px;
         background-repeat: no-repeat;
-        width: 15px;
-        height: 15px;
-        left: -20px;
-        top: 1px;
-
-        @media (min-width: $tablet-width) {
-            background-size: 24px 24px;
-            width: 24px;
-            height: 24px;
-            top: 3px;
-            left: 0px;
-        }
-    }
-
-    @media (min-width: $tablet-width) {
-        margin-top: 41px;
-        margin-right: 90px;
-        font-size: 21px;
-        line-height: 30px;
-    }
-
-    @media (min-width: $desktop-width) {
+        background-size: 24px 24px;
+        width: 24px;
+        height: 24px;
+        top: 3px;
+        left: 0px;
     }
 }
 
 .promotion {
-    @media (min-width: $tablet-width) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: space-between;
-        margin-top: -88px;
-    }
-
-    @media (min-width: $desktop-width) {
-        margin-top: -88px;
-        max-width: 1840px;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin-top: -88px;
+    max-width: 1840px;
 }
 .promotion__wrapper {
     margin: 0;
     padding: 0;
+    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
     @media (min-width: $tablet-width) {
-        margin-left: 90px;
     }
 
     @media (min-width: $desktop-width) {
-        // margin-left: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
     }
 }
 
@@ -117,82 +80,69 @@
 
 .promotion__title {
     margin: 0;
-    padding-top: 100px;
+    padding-top: 224px;
     font-family: $basic-font-title;
-    font-size: 25px;
-    // text-align: center;
+    font-size: 64px;
+    line-height: 64px;
 
     @media (min-width: $tablet-width) {
-        font-size: 30px;
     }
-
     @media (min-width: $desktop-width) {
-        padding-top: 224px;
-        font-size: 64px;
-        font-size: 64px;
     }
 }
+
 .promotion__decription {
-    font-size: 14px;
-    display: block;
     margin: 0;
-    padding: 50px 0 40px 0;
+    padding: 27px 0 44px 0;
+    max-width: 350px;
+    font-size: 21px;
+    line-height: 30px;
+    display: block;
 
     @media (min-width: $tablet-width) {
-        max-width: 350px;
-        font-size: 21px;
     }
     @media (min-width: $desktop-width) {
-        padding: 27px 0 44px 0;
-        font-size: 21px;
-        line-height: 30px;
     }
 }
 
 .promotion__link-description {
-    margin-left: 15px;
-    font-size: 10px;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 24px;
     text-decoration: none;
     color: $squant;
 
     @media (min-width: $desktop-width) {
-        font-size: 21px;
-        line-height: 30px;
     }
 
     @media (min-width: $desktop-width) {
-        margin-left: 30px;
-        font-size: 16px;
-        line-height: 24px;
     }
 }
 .promotion__scrooler {
+    margin-left: 58px;
+    margin-top: auto;
+    margin-bottom: 24px;
+
     display: block;
     text-decoration: none;
     color: $hot-embers;
-    font-size: 12px;
-    margin-left: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 18px;
+
     position: relative;
 
     &::before {
         content: "";
         position: absolute;
         background-image: url("../img/icon-arrows.svg");
-        background-size: 25px 20px;
         background-repeat: no-repeat;
-        width: 25px;
-        height: 20px;
-        left: -30px;
+        background-size: 41px 30px;
+        width: 41px;
+        height: 30px;
+        left: -50px;
         top: 3px;
 
         @media (min-width: $desktop-width) {
-            background-size: 41px 30px;
-            width: 41px;
-            height: 30px;
-            left: -50px;
-            top: 3px;
         }
     }
 
@@ -203,21 +153,17 @@
     }
 
     @media (min-width: $desktop-width) {
-        font-size: 16px;
-        line-height: 18px;
-        margin-top: auto;
-        margin-bottom: 24px;
-        margin-left: 58px;
     }
 }
 
 .promotion__content {
     width: 100%;
     height: 100%;
+    max-width: 940px;
+    max-height: 920px;
+
     @media (min-width: $tablet-width) {
     }
     @media (min-width: $desktop-width) {
-        max-width: 940px;
-        max-height: 920px;
     }
 }
