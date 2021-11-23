@@ -12,19 +12,24 @@
     display: flex;
     justify-content: space-between;
     max-width: 1840px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.header__logo-link {
+    z-index: 5;
 }
 
 .header__logo-image {
     margin-top: 28px;
     width: 200px;
     height: 55px;
-    margin-left: 90px;
 }
 
 .header__contacts-link {
     margin: 0;
     margin-top: 41px;
-    margin-right: 90px;
+
     padding: 0;
     padding-left: 33px;
     font-size: 21px;
