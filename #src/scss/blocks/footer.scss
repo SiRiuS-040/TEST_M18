@@ -27,6 +27,16 @@
 
 .socials__item {
     margin: 15px;
+    display: flex;
+}
+
+.socials__link {
+    text-decoration: none;
+    line-height: 0;
+
+    &:hover {
+        box-shadow: 0px 15px 20px rgba(249, 87, 46, 0.7);
+    }
 }
 
 .socials__title {
@@ -75,6 +85,10 @@
         width: 24px;
         height: 24px;
     }
+
+    &:hover {
+        color: $hot-embers;
+    }
 }
 
 .contacts__adress {
@@ -88,7 +102,8 @@
     }
 }
 
-.contacts__mail {
+.contacts__link--mail {
+    display: inline-block;
     margin-right: 60px;
     position: relative;
 
@@ -102,6 +117,14 @@
         background-repeat: no-repeat;
         width: 30px;
         height: 20px;
+    }
+
+    &:hover {
+        color: $hot-embers;
+    }
+
+    & span {
+        border-bottom: 2px solid $hot-embers;
     }
 }
 
