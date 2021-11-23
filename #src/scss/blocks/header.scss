@@ -152,9 +152,7 @@
     }
 
     &:hover::before {
-        background-size: 21px 30px;
-        width: 21px;
-        height: 30px;
+        background-image: url("../img/icon-arrows-hover.svg");
     }
 
     @media (min-width: $desktop-width) {
