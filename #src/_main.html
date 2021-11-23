@@ -51,23 +51,35 @@
                     <li class="form__item">
                         <label class="form__label" for="name"><span class="visually-hidden"> Имя и
                                 фамилия*</span></label>
-                        <input class="form__input" type="text" name="name" placeholder="Имя и фамилия*" required
-                            autocomplete="off">
+                        <input class="form__input" type="text" id="name" name="name" placeholder="Имя и фамилия*"
+                            required autocomplete="off">
                     </li>
                     <li class="form__item">
                         <label class="form__label" for="mail"><span class="visually-hidden">Е-mail
                                 адрес*</span></label>
-                        <input class="form__input" type="email" name="mail" placeholder="Е-mail адрес*" required
-                            autocomplete="off">
+                        <input class="form__input" type="email" id="email" name="mail" placeholder="Е-mail адрес*"
+                            required autocomplete="off">
                     </li>
                     <li class="form__item">
                         <label class="form__label" for="phone"><span class="visually-hidden">Телефон</span></label>
-                        <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="off">
+                        <input class="form__input" type="tel" id="phone" name="phone" placeholder="Телефон"
+                            autocomplete="off">
                     </li>
                 </ul>
                 <button type="submit" class="form__submit basic-button">Подписаться</button>
                 <p class="form__input-description">* Обязательные для заполнения поля</p>
                 <a class="form__rules-link" href="blank.html" target="_blank">Политика конфиденциальности</a>
+                <div class="form__message message disabled">
+                    <div class="message__wrapper ">
+                        <svg width="214" height="148" viewBox="0 0 214 148" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 71.932L76.0442 138L204 10" stroke="#F9572E" stroke-width="20"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="message__text">Спасибо! Мы будем держать <br /> вас в курсе обновлений</p>
+                        <button type="button" class="message__close basic-button">Закрыть окно</button>
+                    </div>
+                </div>
             </fieldset>
         </form>
     </section>

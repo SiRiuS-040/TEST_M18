@@ -3,10 +3,7 @@
     padding-top: 33px;
     padding-bottom: 133px;
 }
-.main__advantages {
-}
-.advantages {
-}
+
 .main__title {
     margin: 0;
     margin-top: 133px;
@@ -72,8 +69,6 @@
     line-height: 24px;
     color: $squant;
 }
-.advantages--special {
-}
 
 .advantages__item--special {
     border: 4px solid $jamaican-jade;
@@ -90,21 +85,11 @@
     line-height: 60px;
     color: $black;
 }
-.main__interior-styles {
-}
-
-.interior-styles {
-}
-
-.interior-styles__slider {
-}
 
 .slider {
     margin: 0;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-.slider__wrapper {
 }
 
 .slider__list {
@@ -197,9 +182,6 @@
     }
 }
 
-.slider__control--back {
-}
-
 .slider__control--forward {
     transform: rotate(180deg);
 
@@ -209,14 +191,11 @@
 }
 
 .form {
-    // margin: 0;
-    // padding: 0;
     width: 980px;
     margin-left: auto;
     margin-right: auto;
 }
-.form__form {
-}
+
 .form__group {
     display: flex;
     flex-direction: column;
@@ -337,4 +316,35 @@
     line-height: 20px;
     color: $hot-embers;
     text-decoration: none;
+}
+
+.form__message {
+    position: absolute;
+    z-index: 1100;
+}
+
+.message__wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+}
+
+.message__text {
+    margin: 0;
+    margin-top: 40px;
+    font-family: $basic-font-text;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.message__close {
+    margin-top: 30px;
+    border: none;
 }
