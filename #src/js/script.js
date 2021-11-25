@@ -95,3 +95,255 @@ const setFormSubmit = () => {
 setFormSubmit();
 
 // Слайдер 
+
+const imagesArray = [
+    {
+        path: "url('../img/photo-style-1.jpg')",
+        desc: "Описание фото 1"
+    },
+    {
+        path: "url('../img/photo-style-2.jpg')",
+        desc: "Описание фото 2"
+    },
+    {
+        path: "url('../img/photo-style-3.jpg')",
+        desc: "Описание фото 3"
+    },
+];
+
+const slider = document.querySelector('.slider');
+const slideItem = slider.querySelector('.slider__item');
+const slidesArray = slider.querySelectorAll('.slider__item');
+const sliderContolForward = slider.querySelector('.slider__control--forward');
+const sliderContolBack = slider.querySelector('.slider__control--back');
+
+// Отрисованы слайды из массива
+
+for (let i = 0; i < slidesArray.length; i++) {
+    slidesArray[i].style.backgroundImage = imagesArray[i].path;
+}
+
+// новый вариант
+
+let b = 1;
+let c;
+
+let d = imagesArray.length - 1;
+
+console.log(' b  в начале = ' + b);
+
+sliderContolForward.onclick = function () {
+    c = b;
+    c++;
+
+    if (c > imagesArray.length - 1) {
+        c = 0;
+    }
+
+    console.log('c до переборки = ' + (c));
+    console.log('B до переборки = ' + (b));
+
+    for (let i = 0; i < slidesArray.length; i++) {
+
+        console.log(' b в начале цикла = ' + b);
+
+        if (b < imagesArray.length) {
+
+            slidesArray[i].style.backgroundImage = imagesArray[b].path;
+
+            b++;
+
+            console.log('i = ' + i);
+            console.log('b = ' + b);
+        } else {
+            b = 0;
+            console.log('вернулось b из else ' + b);
+            slidesArray[i].style.backgroundImage = imagesArray[b].path;
+
+            b++;
+
+            console.log('i = ' + i);
+            console.log('b = ' + b);
+        }
+    }
+    console.log('вернулось c из функции = ' + (c));
+    b = c;
+    console.log('вернулось b из функции = ' + (b));
+
+    console.log('КОНЕЦ ФУНКЦИИ ВПЕРЕД');
+    return b;
+};
+
+
+
+sliderContolBack.onclick = function () {
+
+    c = b;
+    c--;
+
+    if (c < 0) {
+        c = imagesArray.length - 1;
+    }
+
+    if (c > imagesArray.length - 1) {
+        c = 0;
+    }
+
+    if (b < 0) {
+        b = c;
+    }
+
+    if (b > imagesArray.length - 1) {
+        b = 0;
+    }
+
+    console.log('C до переборки = ' + (c));
+    console.log('B до переборки = ' + (b));
+
+    for (let i = slidesArray.length - 1; i >= 0; i--) {
+
+        console.log(' b в начале цикла = ' + b);
+
+
+        if (b >= 0) {
+
+            console.log('вернулось b = ' + b);
+            slidesArray[i].style.backgroundImage = imagesArray[b].path;
+
+            console.log('i = ' + i);
+            console.log('b = ' + b);
+
+            b--;
+
+        } else {
+
+            b = imagesArray.length - 1;
+
+            console.log('меньше нуля  - вернулось b = ' + b);
+
+            slidesArray[i].style.backgroundImage = imagesArray[b].path;
+
+            console.log('i = ' + i);
+            console.log('b = ' + b);
+
+            b--;
+
+
+        }
+
+
+
+    }
+
+    console.log('вернулось C из функции = ' + (c));
+    b = c;
+    console.log('вернулось b из функции = ' + (b));
+    console.log('КОНЕЦ ФУНКЦИИ НАЗАД');
+
+    return b;
+
+
+};
+
+
+// кривой вариант слайдера
+
+// let b = 0;
+// let c = 1;
+
+// let d = imagesArray.length - 1;
+
+// console.log(' b  в начале = ' + b);
+
+// sliderContolForward.onclick = function () {
+//     c = b;
+//     c++;
+
+//     if (c > imagesArray.length - 1) {
+//         c = 0;
+//     }
+
+//     console.log('c до переборки = ' + (c));
+//     console.log('B до переборки = ' + (b));
+
+//     for (let i = 0; i < slidesArray.length; i++) {
+//         b = b + 1;
+
+//         console.log(' b в начале цикла = ' + b);
+//         if (b < imagesArray.length) {
+
+//             slidesArray[i].style.backgroundImage = imagesArray[b].path;
+
+//             console.log('i = ' + i);
+//             console.log('b = ' + b);
+//         } else {
+//             b = 0;
+//             console.log('вернулось b из else ' + b);
+//             slidesArray[i].style.backgroundImage = imagesArray[b].path;
+//             console.log('i = ' + i);
+//             console.log('b = ' + b);
+//         }
+//     }
+//     console.log('вернулось c из функции = ' + (c));
+//     b = c;
+//     console.log('вернулось b из функции = ' + (b));
+
+//     console.log('КОНЕЦ ФУНКЦИИ ВПЕРЕД');
+//     return b;
+// };
+
+// sliderContolBack.onclick = function () {
+
+//     d = b;
+//     d--;
+
+//     if (d < 0) {
+//         d = imagesArray.length - 1;
+//     }
+
+//     if (b < 0) {
+//         b = d;
+//     }
+
+//     console.log('D до переборки = ' + (d));
+//     console.log('B до переборки = ' + (b));
+
+//     for (let i = 0; i < slidesArray.length; i++) {
+
+//         b = b + 1;
+
+//         console.log(' b в начале цикла = ' + b);
+
+
+//         if (b > imagesArray.length - 1) {
+
+//             b = 0;
+
+//             console.log('больше массива  - вернулось b = ' + b);
+
+//             slidesArray[i].style.backgroundImage = imagesArray[b].path;
+
+//             console.log('i = ' + i);
+//             console.log('b = ' + b);
+//         }
+
+//         if (b > 0) {
+
+//             console.log('вернулось b = ' + b);
+//             slidesArray[i].style.backgroundImage = imagesArray[b].path;
+//             console.log('i = ' + i);
+//             console.log('b = ' + b);
+//         }
+
+//     }
+
+//     console.log('вернулось D из функции = ' + (d));
+//     b = d;
+//     console.log('вернулось b из функции = ' + (b));
+//     console.log('КОНЕЦ ФУНКЦИИ НАЗАД');
+
+//     return b;
+
+
+// };
+
